@@ -1,3 +1,5 @@
+[![Release](https://jitpack.io/v/Pygmalion69/TourGuide.svg)](https://jitpack.io/#Pygmalion69/TourGuide)
+
 # TourGuide
 TourGuide is an Android library. It lets you add pointer, overlay and tooltip easily, guiding users on how to use your app. Refer to the example below(this is a trivial example for demo purpose):
 
