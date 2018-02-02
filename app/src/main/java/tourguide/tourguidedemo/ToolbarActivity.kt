@@ -3,7 +3,7 @@ package tourguide.tourguidedemo
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.ActionBarActivity
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Gravity
 import android.view.Menu
@@ -20,7 +20,7 @@ import tourguide.tourguide.ToolTip
 import tourguide.tourguide.TourGuide
 
 
-class ToolbarActivity : ActionBarActivity() {
+class ToolbarActivity : AppCompatActivity() {
 
     private val hasStatusBar
         get() = intent.getBooleanExtra(STATUS_BAR, false)
