@@ -14,7 +14,7 @@ import tourguide.tourguide.ToolTip;
 import tourguide.tourguide.TourGuide;
 
 
-public class OverlayCustomizationActivity extends ActionBarActivity {
+public class RoundedRectangleOverlayActivity extends ActionBarActivity {
     public TourGuide mTutorialHandler;
     public Activity mActivity;
 
@@ -24,7 +24,7 @@ public class OverlayCustomizationActivity extends ActionBarActivity {
         mActivity = this;
         setContentView(R.layout.activity_overlay_customization);
 
-        Button button = (Button)findViewById(R.id.button);
+        final Button button = (Button)findViewById(R.id.button);
         Button next_button = (Button)findViewById(R.id.next_button);
 
         ToolTip toolTip = new ToolTip().
@@ -37,7 +37,8 @@ public class OverlayCustomizationActivity extends ActionBarActivity {
                 // if setOnClickListener is not used, disableClick() will take effect
                 .disableClick(false)
                 .disableClickThroughHole(false)
-                .setStyle(Overlay.Style.RECTANGLE)
+                .setStyle(Overlay.Style.ROUNDED_RECTANGLE)
+                .setRoundedCornerRadius(8)
                 .setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

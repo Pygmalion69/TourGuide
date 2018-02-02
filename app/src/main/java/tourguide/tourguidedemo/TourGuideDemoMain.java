@@ -34,8 +34,8 @@ public class TourGuideDemoMain extends ActionBarActivity {
         public Object getItem(int arg0) { return null;}
         public long getItemId(int position) { return position; }
         public int getCount() {
-            return 18;
-//            return 19;
+            return 20;
+//            return 21;
         }
 
         public View getView(final int position, View convertView, ViewGroup parent) {
@@ -67,7 +67,7 @@ public class TourGuideDemoMain extends ActionBarActivity {
                     @Override
                     public void onClick(View view) {
                         mIntent = new Intent(mActivity, BasicActivity.class);
-                        mIntent.putExtra(BasicActivity.COLOR_DEMO, true);
+                        mIntent.putExtra(BasicActivity.Companion.getCOLOR_DEMO(), true);
                         startActivity(mIntent);
                     }
                 });
@@ -77,7 +77,7 @@ public class TourGuideDemoMain extends ActionBarActivity {
                     @Override
                     public void onClick(View view) {
                         mIntent = new Intent(mActivity, BasicActivity.class);
-                        mIntent.putExtra(BasicActivity.GRAVITY_DEMO, true);
+                        mIntent.putExtra(BasicActivity.Companion.getGRAVITY_DEMO(), true);
                         startActivity(mIntent);
                     }
                 });
@@ -86,7 +86,7 @@ public class TourGuideDemoMain extends ActionBarActivity {
                     @Override
                     public void onClick(View view) {
                         mIntent = new Intent(mActivity, ToolbarActivity.class);
-                        mIntent.putExtra(ToolbarActivity.STATUS_BAR, true);
+                        mIntent.putExtra(ToolbarActivity.Companion.getSTATUS_BAR(), true);
                         startActivity(mIntent);
                     }
                 });
@@ -96,7 +96,7 @@ public class TourGuideDemoMain extends ActionBarActivity {
                     @Override
                     public void onClick(View view) {
                         mIntent = new Intent(mActivity, ToolbarActivity.class);
-                        mIntent.putExtra(ToolbarActivity.STATUS_BAR, false);
+                        mIntent.putExtra(ToolbarActivity.Companion.getSTATUS_BAR(), false);
                         startActivity(mIntent);
                     }
                 });
@@ -106,7 +106,7 @@ public class TourGuideDemoMain extends ActionBarActivity {
                     @Override
                     public void onClick(View view) {
                         mIntent = new Intent(mActivity, ToolTipGravityActivity.class);
-                        mIntent.putExtra(ToolTipGravityActivity.TOOLTIP_NUM, 1);
+                        mIntent.putExtra(ToolTipGravityActivity.Companion.getTOOLTIP_NUM(), 1);
                         startActivity(mIntent);
                     }
                 });
@@ -116,7 +116,7 @@ public class TourGuideDemoMain extends ActionBarActivity {
                     @Override
                     public void onClick(View view) {
                         mIntent = new Intent(mActivity, ToolTipGravityActivity.class);
-                        mIntent.putExtra(ToolTipGravityActivity.TOOLTIP_NUM, 2);
+                        mIntent.putExtra(ToolTipGravityActivity.Companion.getTOOLTIP_NUM(), 2);
                         startActivity(mIntent);
                     }
                 });
@@ -126,7 +126,7 @@ public class TourGuideDemoMain extends ActionBarActivity {
                     @Override
                     public void onClick(View view) {
                         mIntent = new Intent(mActivity, ToolTipGravityActivity.class);
-                        mIntent.putExtra(ToolTipGravityActivity.TOOLTIP_NUM, 3);
+                        mIntent.putExtra(ToolTipGravityActivity.Companion.getTOOLTIP_NUM(), 3);
                         startActivity(mIntent);
                     }
                 });
@@ -136,7 +136,7 @@ public class TourGuideDemoMain extends ActionBarActivity {
                     @Override
                     public void onClick(View view) {
                         mIntent = new Intent(mActivity, ToolTipGravityActivity.class);
-                        mIntent.putExtra(ToolTipGravityActivity.TOOLTIP_NUM, 4);
+                        mIntent.putExtra(ToolTipGravityActivity.Companion.getTOOLTIP_NUM(), 4);
                         startActivity(mIntent);
                     }
                 });
@@ -262,10 +262,34 @@ public class TourGuideDemoMain extends ActionBarActivity {
                         startActivity(mIntent);
                     }
                 });
+            } else if (position == 18){
+                text.setText("Rounded Rectangle Overlay");
+                row.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mIntent = new Intent(mActivity, RoundedRectangleOverlayActivity.class);
+                        startActivity(mIntent);
+                    }
+                });
+            } else if (position == 19){
+                text.setText("Adjust Overlay Padding");
+                row.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mIntent = new Intent(mActivity, AdjustPaddingOverlayActivity.class);
+                        startActivity(mIntent);
+                    }
+                });
             }
-//            else if (position == 17){
-//                mIntent = new Intent(mActivity, MemoryLeakTestActivity.class);
+//            else if (position == 20){
 //                text.setText("Memory Leak Test");
+//                row.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        mIntent = new Intent(mActivity, MemoryLeakTestActivity.class);
+//                        startActivity(mIntent);
+//                    }
+//                });
 //            }
 
             return row;
