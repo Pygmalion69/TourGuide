@@ -244,7 +244,7 @@ public class TourGuide {
             LayoutInflater layoutInflater = mActivity.getLayoutInflater();
 
             if (mToolTip.getCustomView() == null) {
-                mToolTipViewGroup = layoutInflater.inflate(R.layout.tooltip, null);
+                mToolTipViewGroup = layoutInflater.inflate(R.layout.tourguide_tooltip, null);
                 View toolTipContainer = mToolTipViewGroup.findViewById(R.id.toolTip_container);
                 TextView toolTipTitleTV = (TextView) mToolTipViewGroup.findViewById(R.id.title);
                 TextView toolTipDescriptionTV = (TextView) mToolTipViewGroup.findViewById(R.id.description);
